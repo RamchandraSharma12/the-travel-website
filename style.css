@@ -146,7 +146,7 @@
             background-size: 100%, 100%;
             border-radius: 50%;
             background-color: rgba(176, 112, 112, 0.3);
-            padding: 20px;
+           
         }
 
         
@@ -176,8 +176,11 @@
                 font-size: 1rem;
             }
             
+        
          
         }
+
+
 
         /* Floating Elements */
         .floating-elements {
@@ -289,10 +292,10 @@
 
 
 .hero-section {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4;
 }
 
 .hero-text h6 {
@@ -408,72 +411,6 @@
         margin-bottom: 30px;
       }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -731,3 +668,23 @@
 .text-whites{
     color: rgb(15, 152, 231);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

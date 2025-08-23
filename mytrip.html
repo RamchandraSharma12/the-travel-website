@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel the Best</title>
+  <!-- Bootstrap CSS -->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    .hero-section {
+      position: relative;
+      min-height: 80vh;
+      padding: 60px 0;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .hero-text {
+      padding: 20px;
+    }
+    .hero-text h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: #1e3a8a;
+      line-height: 1.2;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin: 20px 0;
+    }
+    .btn-custom {
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #152e6b;
+    }
+    .btn-outline-custom {
+      color: #1e3a8a;
+      border-color: #1e3a8a;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+    .btn-outline-custom:hover {
+      color: #fff;
+      background-color: #1e3a8a;
+    }
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .review-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 10px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+    }
+    .rocket-icon {
+      font-size: 2rem;
+      color: #f59e0b;
+      margin-left: 10px;
+    }
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+    }
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px 18px;
+      font-size: 24px;
+      z-index: 1000;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 30px 0;
+    }
+     .search-section {
+      background-color: #f8f9fa;
+      padding: 50px 20px;
+    }
+    .search-results .card {
+      transition: transform 0.3s ease;
+    }
+    .search-results .card:hover {
+      transform: translateY(-5px);
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <i class="fas fa-plane float-icon"></i>
+        <i class="fas fa-globe float-icon"></i>
+        <i class="fas fa-compass float-icon"></i>
+        <i class="fas fa-map-marker-alt float-icon"></i>
+    </div>
+
+    <!-- Enhanced Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+              <img src="/image/WhatsApp.png"  alt="Paradise Beach">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            <i class="fas fa-plane"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotel.html">
+                            <i class="fas fa-hotel"></i> Hotels
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/crarental.html">
+                            <i class="fas fa-car"></i> Car Rental
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mytrip.html">
+                            <i class="fas fa-suitcase"></i> My Trips
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+  <div class="container py-5">
+    <div class="row align-items-center hero-section">
+      <div class="col-md-6 hero-text">
+        <a href="#" class="btn btn-outline-custom mb-3">Discover the World! 🌍</a>
+        <h1>Travel the Best <br> It's a Big World, <br> Go Explore! <span class="rocket-icon">🚀</span></h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, atque eum. Odio deserunt neque dolorum soluta! Deserunt repudiandae placeat reiciendis aliquid nisi. Assumenda sapiente laboriosam deserunt molestiae dicta. Numquam, et?</p>
+        <div>
+          <a href="#" class="btn btn-custom me-3">My Trip🚀</a>
+          <a href="#" class="btn btn-outline-custom">Explore</a>
+        </div>
+      </div>
+      <div class="col-md-6 hero-image position-relative">
+        <img src="/image/hotel4.avif" alt="Travel Hero" class="img-fluid">
+        <div class="review-badge">
+          <span>Our Best Services</span><br>
+          <span>4.5 (20k Reviews)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Search Section -->
+<section class="search-section text-center">
+  <div class="container">
+    <h2 class="mb-4">Search Flats & Bookings</h2>
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-6">
+        <input type="text" class="form-control form-control-lg" placeholder="Enter location, flat type, etc...">
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary btn-lg">Search</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="row search-results">
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card">
+          <img src="/image/hotels.jpg" class="card-img-top" alt="Flat">
+          <div class="card-body">
+            <h5 class="card-title">Luxury 2BHK in Delhi</h5>
+            <p class="card-text">Located in South Delhi. Fully furnished with AC, TV, WiFi.</p>
+            <p class="text-primary fw-bold">₹25,000/month</p>
+            <a href="#" class="btn btn-outline-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card">
+          <img src="/image/photo-1612278675615-7b093b07772d.avif" class="card-img-top" alt="Flat">
+          <div class="card-body">
+            <h5 class="card-title">Luxury 2BHK in Goa</h5>
+            <p class="card-text">Located in South Goa. Fully furnished with AC, TV, WiFi.</p>
+            <p class="text-primary fw-bold">₹25,000/month</p>
+            <a href="#" class="btn btn-outline-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card">
+          <img src="/image/photo-1418854982207-12f710b74003.avif" class="card-img-top" alt="Flat">
+          <div class="card-body">
+            <h5 class="card-title">Luxury 2BHK in Asam</h5>
+            <p class="card-text">Located in asam. Fully furnished with AC, TV, WiFi.</p>
+            <p class="text-primary fw-bold">₹25,000/month</p>
+            <a href="#" class="btn btn-outline-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more cards similarly as needed -->
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  
+    <div class="container">
+    <h2 class="section-title">📍 Visit Us in Delhi</h2>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.1120723707!2d76.81306112229503!3d28.64727993539679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd335c6c8b1f%3A0x44fa8eea18f8a9c2!2sDelhi!5e0!3m2!1sen!2sin!4v1665595601571!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a
+    href="https://wa.me/919999999999?text=Hi!%20I%20want%20to%20visit%20your%20Delhi%20location"
+    target="_blank"
+    class="whatsapp-btn"
+    title="Chat with us on WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+
+
+
+    <footer class="footer mt-5 text-white py-5">
+  <div class="container">
+    <div class="row">
+      <!-- About Me Section -->
+      <div class="col-md-6 mb-4 d-flex">
+        <img src="/image/photo-1499678329028-101435549a4e.avif" alt="About Me" class="me-3" style="height: 100px; width: 100px; object-fit: cover; border-radius: 5px;">
+        <div>
+          <h5>The Travel Company</h5>
+          <p>116,1st Floor Antriksh Bhawan k,g Marg Connaught place New Delhi-110001</p>
+          <a href="#" class="text-white text-decoration-underline">Read More</a>
+        </div>
+      </div>
+
+      <!-- Mailing List Section -->
+      <div class="col-md-6 mb-4">
+        <h5>Join My Mailing list</h5>
+        <form>
+          <div class="mb-2">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email here">
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="subscribe">
+            <label class="form-check-label" for="subscribe">
+              Yes, subscribe me to your newsletter. *
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center pt-4 border-top border-light mt-4">
+      <p class="mb-1">@ thetravelcompanyindia@gmail.com <a href="#" class="text-white text-decoration-underline"></a></p>
+      <div class="social-icons mt-2">
+       <a href="https://www.facebook.com" class="text-whites me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com" class="text-intragram me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.pinterest.com" class="text-pinterest me-3"><i class="bi bi-pinterest"></i></a>
+        <a href="https://www.twitter.com" class="text-twitter"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelector('.hero-text').classList.add('animate');
+          entry.target.querySelector('.hero-img').classList.add('animate');
+          observer.unobserve(entry.target); // Stop observing once animated
+        }
+      });
+    }, {
+      threshold: 0.3 // Trigger when 30% of the section is visible
+    });
+
+    const heroSection = document.querySelector('.hero-section');
+    observer.observe(heroSection);
+  });
+</script>
+   
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
+

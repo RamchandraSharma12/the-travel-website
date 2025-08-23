@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TravelVibe - Your Dream Destinations</title>
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- AOS CSS -->    
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="style.css">
+   
+<style>
+    .card-custom {
+  background: #fefefe;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-btn {
+  background-color: #007bff;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    padding: 20px;
+  }
+}
+
+
+ .square-box {
+      width: 400px;
+      height: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      margin: 50px auto;
+    }
+
+    .square-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      border-radius: 10px;
+    }
+
+    .square-box img:hover {
+      transform: scale(1.1);
+    }
+      @media (max-width: 394px) {
+      .square-box {
+        width:84%;
+       
+      }
+    
+    }
+     body {
+      background-image: url('/image/car2.jpg'); /* 👈 Aapka background image path */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .car-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .car-card h5 {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .car-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .btn-rent {
+      background-color: #ff6f00;
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 10px 0;
+      transition: background 0.3s ease;
+    }
+
+    .btn-rent:hover {
+      background-color: #e65100;
+    }
+
+    .container {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+    
+</style>
+</head>
+ 
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <i class="fas fa-plane float-icon"></i>
+        <i class="fas fa-globe float-icon"></i>
+        <i class="fas fa-compass float-icon"></i>
+        <i class="fas fa-map-marker-alt float-icon"></i>
+    </div>
+
+    <!-- Enhanced Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+              <img src="/image/WhatsApp.png"  alt="Paradise Beach">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            <i class="fas fa-plane"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotel.html">
+                            <i class="fas fa-hotel"></i> Hotels
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/crarental.html">
+                            <i class="fas fa-car"></i> Car Rental
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mytrip.html">
+                            <i class="fas fa-suitcase"></i> My Trips
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container main-section my-5">
+  <div class="row card-custom shadow-lg overflow-hidden rounded-4" data-aos="fade-up" data-aos-duration="1000">
+    <div class="col-md-6 p-5 d-flex flex-column justify-content-center bg-light">
+      <h2 class="fw-bold mb-3" data-aos="fade-right" data-aos-delay="100">THE EASY WAY TO <br> Book Your Car</h2>
+      <p class="text-muted mb-4" data-aos="fade-right" data-aos-delay="200">Live in India, New Delhi and Other Places</p>
+      <form class="row g-3" data-aos="fade-right" data-aos-delay="300">
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Car model...">
+        </div>
+        <div class="col-md-4">
+          <input type="number" class="form-control" placeholder="Amount in $">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Min. year">
+        </div>
+        <div class="col-md-1 d-grid">
+          <button type="submit" class="btn btn-primary search-btn">🔍</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 p-0">
+      <img src="/image/cars.avif" alt="Car driving image" class="img-fluid h-100 w-100 object-fit-cover" data-aos="zoom-in" data-aos-delay="500">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="car-card row align-items-center" data-aos="fade-up">
+    
+    <!-- Left Content -->
+    <div class="col-md-6 content">
+      <h2>Rent Your Dream Car Today</h2>
+      <p>Explore a wide range of luxurious and affordable cars. Daily, weekly, and monthly plans available. Book in just one click!</p>
+      <button class="btn btn-primary">Rent Now</button>
+    </div>
+
+    <!-- Right Image -->
+    <div class="col-md-6">
+      <div class="square-box" data-aos="zoom-in">
+        <img src="/image/cars.avif" alt="Image 1">
+        <img src="/image/car2.jpg" alt="Image 2">
+        <img src="/image/car3.jpg" alt="Image 3">
+        <img src="/image/car4.jpg" alt="Image 4">
+      </div>
+    </div>
+
+  </div> 
+</div>
+
+
+
+
+
+  <div class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="card car-card">
+        <img src="/image/car4.jpg" alt="Car 1">
+        <div class="card-body">
+          <h5>Luxury Sedan</h5>
+          <p>Rent a premium luxury car for comfort and style.</p>
+          <button class="btn btn-rent w-100">Rent Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+      <div class="card car-card">
+        <img src="/image/car5.jpg" alt="Car 2">
+        <div class="card-body">
+          <h5>Sporty Coupe</h5>
+          <p>Fast, fierce, and fun. Book your sporty ride today.</p>
+          <button class="btn btn-rent w-100">Rent Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card car-card">
+        <img src="/image/car6.jpg" alt="Car 3">
+        <div class="card-body">
+          <h5>Family SUV</h5>
+          <p>Spacious and reliable SUVs for family trips and vacations.</p>
+          <button class="btn btn-rent w-100">Rent Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  
+
+  <!-- Footer -->
+  <footer class="footer mt-5 text-white bg-dark py-5">
+    <div class="container">
+      <div class="row">
+        <!-- About -->
+        <div class="col-md-6 mb-4 d-flex">
+          <img src="/image/photo-1499678329028-101435549a4e.avif" alt="About" class="me-3" style="height: 100px; width: 100px; object-fit: cover; border-radius: 5px;">
+          <div>
+            <h5>The Travel Company</h5>
+            <p>116, 1st Floor Antriksh Bhawan, Connaught Place, New Delhi - 110001</p>
+            <a href="#" class="text-white text-decoration-underline">Read More</a>
+          </div>
+        </div>
+
+        <!-- Mailing List -->
+        <div class="col-md-6 mb-4">
+          <h5>Join My Mailing List</h5>
+          <form>
+            <div class="mb-2">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email here">
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="subscribe">
+              <label class="form-check-label" for="subscribe">Yes, subscribe me to your newsletter.</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="text-center pt-4 border-top border-light mt-4">
+        <p class="mb-1">@ thetravelcompanyindia@gmail.com</p>
+        <div class="social-icons mt-2">
+         <a href="https://www.facebook.com" class="text-whites me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com" class="text-intragram me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.pinterest.com" class="text-pinterest me-3"><i class="bi bi-pinterest"></i></a>
+        <a href="https://www.twitter.com" class="text-twitter"><i class="bi bi-twitter"></i></a>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>

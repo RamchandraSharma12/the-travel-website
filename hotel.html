@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TravelVibe - Your Dream Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"     rel="stylesheet">  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .img-fluid {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-height: 500px;
+      display: block;
+    }
+
+    .container.my-5 {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .circle-card {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .circle-card .card-img-top {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      border-bottom: 2px solid #f8f9fa;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .circle-card .card-body {
+      padding: 10px;
+      text-align: center;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .circle-card .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+    }
+
+    .circle-card .card-text {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 5px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      .circle-card {
+        width: 250px;
+        height: 250px;
+      }
+
+      .circle-card .card-img-top {
+        height: 55%;
+      }
+
+      .circle-card .card-title {
+        font-size: 1rem;
+      }
+
+      .circle-card .card-text {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .circle-card {
+        width: 200px;
+        height: 200px;
+      }
+
+      .circle-card .card-title {
+        font-size: 0.9rem;
+      }
+
+      .circle-card .card-text {
+        font-size: 0.7rem;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+      .advantages-section {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .advantages-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #555;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ccc;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .advantage-box {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .advantage-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .advantage-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .advantage-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .advantage-text {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn-brown {
+      background-color: #a87942;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .btn-brown:hover {
+      background-color: #8c6435;
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <i class="fas fa-plane float-icon"></i>
+        <i class="fas fa-globe float-icon"></i>
+        <i class="fas fa-compass float-icon"></i>
+        <i class="fas fa-map-marker-alt float-icon"></i>
+    </div>
+
+    <!-- Enhanced Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+              <img src="/image/WhatsApp.png"  alt="Paradise Beach">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">
+                            <i class="fas fa-plane"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotel.html">
+                            <i class="fas fa-hotel"></i> Hotels
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/crarental.html">
+                            <i class="fas fa-car"></i> Car Rental
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mytrip.html">
+                            <i class="fas fa-suitcase"></i> My Trips
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- Banner -->
+  <div class="container p-0">
+    <img src="/image/hotels.jpg" class="img-fluid w-100" alt="Hotel Banner">
+  </div>
+
+  <!-- Circle Cards Section -->
+  <div class="container my-5">
+    <div class="row justify-content-center g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card circle-card shadow">
+          <img src="/image/hotel3.avif" class="card-img-top" alt="Room">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Room</h5>
+            <p class="card-text">Comfortable rooms with sea view<br> and king-size bed.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card circle-card shadow">
+          <img src="/image/hotels.avif" class="card-img-top" alt="Restaurant">
+          <div class="card-body">
+            <h5 class="card-title">Restaurant</h5>
+            <p class="card-text">Enjoy delicious meals prepared <br>by top chefs.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card circle-card shadow">
+          <img src="/image/carasol1.avif" class="card-img-top" alt="Pool">
+          <div class="card-body">
+            <h5 class="card-title">Swimming Pool</h5>
+            <p class="card-text">Relax and unwind in our infinity <br>swimming pool.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="advantages-section">
+  <h2 class="advantages-title">Our Advantages</h2>
+  <div class="container mt-5">
+    <div class="row text-start">
+      <!-- Box 1 -->
+      <div class="col-md-4">
+        <div class="advantage-box">
+          <img src="/image/premium_photo-1722680738736-66a4cdc08923.avif" alt="Beach" class="advantage-img">
+          <h5 class="advantage-title">The Best Beach</h5>
+          <p class="advantage-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste reiciendis totam obcaecati consectetur delectus illo debitis quasi doloremque voluptatum laudantium aspernatur, voluptate ratione quos. Magnam molestiae velit ut optio porro.</p>
+          <button class="btn btn-brown">More Info</button>
+        </div>
+      </div>
+      <!-- Box 2 -->
+      <div class="col-md-4">
+        <div class="advantage-box">
+          <img src="/image/hotel3.avif" alt="hotels" class="advantage-img">
+          <h5 class="advantage-title">Goa Best hotels</h5>
+          <p class="advantage-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, dolorem doloribus cum sunt, est quia alias ea, doloremque modi atque aliquid. Voluptatibus commodi odit expedita voluptate adipisci tempora, exercitationem aspernatur!</p>
+          <button class="btn btn-brown">More Info</button>
+        </div>
+      </div>
+      <!-- Box 3 -->
+      <div class="col-md-4">
+        <div class="advantage-box">
+          <img src="/image/hotel5.avif" alt="Pool" class="advantage-img">
+          <h5 class="advantage-title">Private Pool</h5>
+          <p class="advantage-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, maiores deserunt omnis ea quos, facilis natus quidem iusto reiciendis, vel eius molestiae! Sed nam quidem ipsa necessitatibus enim laborum ab.</p>
+          <button class="btn btn-brown">More Info</button>
+        </div>
+      </div>
+    </div>
+     <div class="row text-start">
+      <!-- Box 4 -->
+      <div class="col-md-4">
+        <div class="advantage-box">
+          <img src="/image/carasol2.avif" alt="Beach" class="advantage-img">
+          <h5 class="advantage-title">The Best Beach</h5>
+          <p class="advantage-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste reiciendis totam obcaecati consectetur delectus illo debitis quasi doloremque voluptatum laudantium aspernatur, voluptate ratione quos. Magnam molestiae velit ut optio porro.</p>
+          <button class="btn btn-brown">More Info</button>
+        </div>
+      </div>
+      <!-- Box 5 -->
+      <div class="col-md-4">
+        <div class="advantage-box">
+          <img src="/image/premium_photo-1676139860466-8b8f71c0a737.avif" alt="hotels" class="advantage-img">
+          <h5 class="advantage-title">Tourist place </h5>
+          <p class="advantage-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, dolorem doloribus cum sunt, est quia alias ea, doloremque modi atque aliquid. Voluptatibus commodi odit expedita voluptate adipisci tempora, exercitationem aspernatur!</p>
+          <button class="btn btn-brown">More Info</button>
+        </div>
+      </div>
+      <!-- Box 6 -->
+      <div class="col-md-4">
+        <div class="advantage-box">
+          <img src="/image/photo-1498307833015-e7b400441eb8.avif" alt="hotels" class="advantage-img">
+          <h5 class="advantage-title">Germany Hotels</h5>
+          <p class="advantage-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, maiores deserunt omnis ea quos, facilis natus quidem iusto reiciendis, vel eius molestiae! Sed nam quidem ipsa necessitatibus enim laborum ab.</p>
+          <button class="btn btn-brown">More Info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer mt-5 text-white bg-dark py-5">
+    <div class="container">
+      <div class="row">
+        <!-- About -->
+        <div class="col-md-6 mb-4 d-flex">
+          <img src="/image/photo-1499678329028-101435549a4e.avif" alt="About" class="me-3" style="height: 100px; width: 100px; object-fit: cover; border-radius: 5px;">
+          <div>
+            <h5>The Travel Company</h5>
+            <p>116, 1st Floor Antriksh Bhawan, Connaught Place, New Delhi - 110001</p>
+            <a href="#" class="text-white text-decoration-underline">Read More</a>
+          </div>
+        </div>
+
+        <!-- Mailing List -->
+        <div class="col-md-6 mb-4">
+          <h5>Join My Mailing List</h5>
+          <form>
+            <div class="mb-2">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email here">
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="subscribe">
+              <label class="form-check-label" for="subscribe">Yes, subscribe me to your newsletter.</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="text-center pt-4 border-top border-light mt-4">
+        <p class="mb-1">@ thetravelcompanyindia@gmail.com</p>
+        <div class="social-icons mt-2">
+         <a href="https://www.facebook.com" class="text-whites me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com" class="text-intragram me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.pinterest.com" class="text-pinterest me-3"><i class="bi bi-pinterest"></i></a>
+        <a href="https://www.twitter.com" class="text-twitter"><i class="bi bi-twitter"></i></a>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>
